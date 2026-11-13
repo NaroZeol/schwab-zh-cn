@@ -1,0 +1,52 @@
+/* Keep the site's sort and help buttons separate, in the same header row. */
+.positions-details-table thead th:has(> .holdings-sort-wrap) {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.positions-details-table thead th > .header-control-wrap,
+.positions-details-table thead th > .holdings-sort-wrap {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.positions-details-table thead th > .header-control-wrap {
+  height: auto;
+  margin: 0 !important;
+}
+
+.positions-details-table thead th > .header-control-wrap:not(:has(> *)),
+.positions-details-table thead th > .header-control-wrap:has(> .holdings-viz-hide:only-child) {
+  display: none;
+}
+
+.positions-details-table thead .header-control-wrap > app-icon-text-overlay {
+  bottom: auto;
+  padding-inline: 0 !important;
+}
+
+.positions-details-table thead .header-control-wrap sdps-modal {
+  white-space: normal;
+}
+
+.positions-details-table thead th#symbol {
+  vertical-align: middle;
+}
+
+.positions-details-table thead th#symbol > .height-48 {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.positions-details-table thead th#symbol .sdps-table--sort {
+  padding-top: 0 !important;
+}
+
+/* Hide the Positions footnote marks while keeping their explanation buttons. */
+#holdingsHeading > h3 > span:only-of-type,
+#positions-account-summary-total-gain-loss-label > sup,
+.positions-details-table thead .holdings-sort-wrap > app-superscript,
+.positions-details-table .holdings-name-wrap_pre-line .sdps-text-nowrap > app-superscript:has(~ app-icon-text-overlay) {
+  display: none;
+}
